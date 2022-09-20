@@ -1,0 +1,42 @@
+<div class="top-section">
+  <p-button label="SUBMIT" (click)="submitQuiz()"></p-button>
+</div>
+<div class="question-section">
+  <p-fieldset legend="Question-{{ questionNo + 1 }}">
+    <div class="p-grid" style="margin-bottom: 10px">
+      <h3>{{ quizQueries[questionNo].question | sanitizeHtml }}</h3>
+      <div
+        class="p-col-12"
+        *ngFor="let opt of quizQueries[questionNo].options; index as i"
+      >
+        <p-radioButton
+          name="answers"
+          [value]="opt | sanitizeHtml"
+          [label]="opt | sanitizeHtml"
+          [(ngModel)]="quizQueries[questionNo].selectedAnswer"
+          inputId="opt_{{ i }}"
+        ></p-radioButton>
+      </div>
+    </div>
+  </p-fieldset>
+</div>
+<div class="nav-section">
+  <p-button
+    label="Prev"
+    icon="pi pi-chevron-left"
+    iconPos="left"
+    (click)="prevQuestion()"
+  ></p-button>
+
+  <p-button
+    label="Next"
+    icon="pi pi-chevron-right"
+    iconPos="right"
+    (click)="nextQuestion()"
+  ></p-button>
+</div>
+<p-confirmDialog
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
+></p-confirmDialog>
+<p-messages [value]="msgs"></p-messages>

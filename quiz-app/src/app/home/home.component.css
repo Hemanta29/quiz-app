@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 90vh;
+}
+:host ::ng-deep .p-dropdown {
+  width: 100%;
+}
+
+input,
+:host >>> .p-dropdown,
+:host >>> .p-dropdown-label,
+:host >>> .p-dropdown .p-dropdown-trigger,
+:host >>> .p-dropdown-items-wrapper,
+:host >>> .p-dropdown-clear-icon{
+  border-radius: 0;
+  background-color: #ffffff;
+}
+/* :host >>> label{
+  display: flex;
+  margin-bottom: 5px;
+} */

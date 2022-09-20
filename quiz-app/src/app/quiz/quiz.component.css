@@ -1,0 +1,14 @@
+.top-section{
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-section {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-section > p-button
+{
+  margin: 15px 5px;
+}

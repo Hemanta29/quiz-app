@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("~primeflex/primeflex.css");
+@import url("~primeicons/primeicons.css");*/
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  min-height: 100vh;
+  background: #f1f3f6;
+}
+
+
