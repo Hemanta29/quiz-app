@@ -15,6 +15,7 @@ import { DynamicDialogModule } from "primeng/dynamicdialog";
 import { VirtualScrollerModule } from "primeng/virtualscroller";
 import { CardModule } from 'primeng/card';
 import { MessagesModule } from 'primeng/messages';
+import { ChartModule } from 'primeng/chart';
 
 
 
@@ -34,7 +35,8 @@ export const primeNgComponents = [
   DynamicDialogModule,
   VirtualScrollerModule,
   CardModule,
-  MessagesModule
+  MessagesModule,
+  ChartModule
 ];
 
 @NgModule({

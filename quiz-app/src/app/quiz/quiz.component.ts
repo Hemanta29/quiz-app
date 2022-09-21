@@ -18,10 +18,16 @@ export class QuizComponent implements OnInit {
   questionNo: number = 0;
   options: any[] = [];
   score: number = 0;
+  userName: string = "";
   constructor(private router: Router,
     private route: ActivatedRoute,
     private confirmationService: ConfirmationService,
     private primengConfig: PrimeNGConfig) {
+
+    const newLocal: any = sessionStorage.getItem("userSelection");
+    const value: any = JSON.parse(newLocal);
+    console.log(value);
+    this.userName = value.userName;
     this.route.data.subscribe((data) => {
       this.quizQueries = data["quizQueries"].Quiz;
       this.options = this.quizQueries[this.questionNo].options;

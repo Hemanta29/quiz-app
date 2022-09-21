@@ -9,6 +9,8 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
+import { DonutComponent } from './chart/donut/donut.component';
+import { AppConfigService } from './app-config.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { SanitizeHtmlPipe } from './sanitize-html.pipe';
     HomeComponent,
     QuizComponent,
     ResultComponent,
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
+    DonutComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { SanitizeHtmlPipe } from './sanitize-html.pipe';
     PrimeNgModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AppConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

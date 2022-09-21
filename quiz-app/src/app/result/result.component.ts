@@ -12,7 +12,6 @@ export class ResultComponent implements OnInit {
   constructor() {
     const newLocal: any = sessionStorage.getItem("quizResults");
     const value: any = JSON.parse(newLocal);
-    console.log(value);
     this.quizAnsweredQueries = value;
     this.quizAnsweredQueries.forEach((quiz: { selectedAnswer: { toString: () => string; }; answer: { toString: () => string; }; }) => {
       if (quiz.selectedAnswer) {
